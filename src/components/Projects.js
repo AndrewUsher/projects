@@ -10,7 +10,8 @@ const categories = [
     'CSS',
     'Experiment',
     'Game',
-    'Landing Page'
+    'Landing Page',
+    'Redesign'
 ]
 const Container = styled.div``
 
