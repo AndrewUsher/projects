@@ -9,15 +9,16 @@ const A = styled.a`
 const Item = styled.li`
   align-items: center;
   background-color: #f2f2f2;
-  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   padding: 0;
   position: relative;
   width: 100%;
   margin: 0 auto 30px auto;
-  transition: transform 300ms;
+  transition: transform 300ms, box-shadow 500ms;
 
   &:hover {
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
   }
 `
