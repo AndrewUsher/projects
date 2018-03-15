@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build ./src/index.html -d docs/",
+    "build": "parcel build ./src/index.html -d docs/ --public-url ./",
     "dev": "parcel ./src/index.html"
   },
   "keywords": [],
