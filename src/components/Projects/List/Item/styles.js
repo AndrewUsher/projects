@@ -1,12 +1,10 @@
-import React from 'react'
 import styled from 'styled-components'
-import image from '../img/landing-page.png'
 
-const A = styled.a`
+export const A = styled.a`
   display: block;
   text-decoration: none;
 `
-const Item = styled.li`
+export const Item = styled.li`
   align-items: center;
   background-color: #f2f2f2;
   box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.1);
@@ -23,7 +21,7 @@ const Item = styled.li`
   }
 `
 
-const ProjectTitle = styled.span`
+export const ProjectTitle = styled.span`
   color: #000;
   display: block;
   font-family: 'PT Sans', sans-serif;
@@ -32,7 +30,7 @@ const ProjectTitle = styled.span`
   top: -5px;
 `
 
-const ProjectCategory = styled.span`
+export const ProjectCategory = styled.span`
   color: #555;
   display: block;
   position: relative;
@@ -40,21 +38,7 @@ const ProjectCategory = styled.span`
   font-size: 15px;
 `
 
-const ProjectImage = styled.img`
+export const ProjectImage = styled.img`
   height: 70px;
   margin-right: 15px;
 `
-
-const ProjectItem = props => (
-    <A href={props.project.liveSite} target="_blank">
-        <Item>
-            <ProjectImage src={image} />
-            <div>
-                <ProjectTitle>{props.project.title}</ProjectTitle>
-                <ProjectCategory>{props.project.category}</ProjectCategory>
-            </div>
-        </Item>
-    </A>
-)
-
-export default ProjectItem

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import Navbar from './components/Navbar'
-import Projects from './components/Projects'
+import Navbar from '../components/Navbar/Navbar'
+import Projects from '../components/Projects/Projects'
 
 class App extends Component {
     render () {
         return (
             <div>
                 <Navbar />
-                <Projects />
+                <Projects projects={this.state.projects} />
             </div>
         )
     }
