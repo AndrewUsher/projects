@@ -30,17 +30,10 @@ class App extends Component {
     render () {
         let filteredList = this.state.projects
             .filter(project => {
-                return (
-                    project.title
-                        .toLowerCase()
-                        .indexOf(this.state.searchTerm.toLowerCase()) !== -1
-                )
+                return project.title.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) !== -1
             })
             .filter(project => {
-                if (
-                    this.state.categoryFilter === '' ||
-          this.state.categoryFilter === 'all'
-                ) {
+                if (this.state.categoryFilter === '' || this.state.categoryFilter === 'all') {
                     return true
                 } else {
                     return project.radioCategory === this.state.categoryFilter
@@ -51,10 +44,7 @@ class App extends Component {
                 <Navbar />
                 <Filters filter={this.filterByCategory.bind(this)} />
                 <Projects projects={filteredList}>
-                    <Search
-                        searchTerm={this.state.searchTerm}
-                        changed={this.filterList.bind(this)}
-                    />
+                    <Search searchTerm={this.state.searchTerm} changed={this.filterList.bind(this)} />
                 </Projects>
             </div>
         )
